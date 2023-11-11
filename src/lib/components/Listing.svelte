@@ -7,7 +7,7 @@
 
 <div class="bg-slate-200 p-8">
 	<article class="listing">
-		<h2 class="text-6xl">{title} - ${price}</h2>
+		<h2 class="text-8xl">{title} - ${price}</h2>
 		<p>{desc}</p>
 		<img src={picture} alt={title} />
 	</article>
