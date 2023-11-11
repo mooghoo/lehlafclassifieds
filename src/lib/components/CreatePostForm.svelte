@@ -1,21 +1,21 @@
 <script>
+	import { Schools } from '$lib/schools';
+
 	let title = '';
 	let desc = '';
 	let picture = ''; // URL or path to the image
 	let price = 0;
-
-	export let handleSubmit = () => {
-		// Handle the form submission logic here
-		// For example, send data to an API or store it locally
-		console.log({ title, desc, picture, price });
-	};
+	let school = Schools[0]; // default school
+	let phone = '';
+	let method = 'POST';
 </script>
 
-<form class="space-y-4" on:submit|preventDefault={handleSubmit}>
+<form class="space-y-4" {method} action="/post">
 	<div>
 		<label class="block text-sm font-medium text-gray-700">Title</label>
 		<input
 			type="text"
+			name="title"
 			bind:value={title}
 			class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
 		/>
@@ -23,12 +23,17 @@
 
 	<div>
 		<label class="block text-sm font-medium text-gray-700">Description</label>
-		<textarea bind:value={desc} class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" />
+		<textarea
+			name="description"
+			bind:value={desc}
+			class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+		/>
 	</div>
 
 	<div>
 		<label class="block text-sm font-medium text-gray-700">Picture URL</label>
 		<input
+			name="picture"
 			type="text"
 			bind:value={picture}
 			class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
@@ -38,10 +43,34 @@
 	<div>
 		<label class="block text-sm font-medium text-gray-700">Price ($)</label>
 		<input
+			name="price"
 			type="number"
 			bind:value={price}
 			class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
 		/>
+	</div>
+
+	<div>
+		<label class="block text-sm font-medium text-gray-700">Phone Number</label>
+		<input
+			name="phone"
+			type="text"
+			bind:value={phone}
+			class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+		/>
+	</div>
+	<div>
+		<label class="block text-sm font-medium text-gray-700">School</label>
+		<select
+			name="school"
+			id="school"
+			class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+			bind:value={school}
+		>
+			{#each Schools as eachSchool}
+				<option value={eachSchool}>{eachSchool}</option>
+			{/each}
+		</select>
 	</div>
 
 	<button
