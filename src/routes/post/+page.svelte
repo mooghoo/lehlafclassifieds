@@ -1,6 +1,11 @@
 <script>
-    import Form from '$lib/components/Form.svelte';
+	import CreatePostForm from '$lib/components/CreatePostForm.svelte';
 </script>
+
 <!-- add POST -->
 
-<Form />
+<CreatePostForm
+	handleSubmit={() => {
+		console.log('Submitted the form!');
+	}}
+/>
