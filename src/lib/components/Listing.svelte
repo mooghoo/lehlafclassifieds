@@ -7,24 +7,26 @@
 	export let school = '';
 </script>
 
-<div class="mt-5 max-w-lg rounded overflow-hidden shadow-lg">
-	<img class="w-full" src={picture} alt={title} />
-	<div class="px-6 py-4">
-		<div class="font-bold text-xl mb-2">
-			<a href="/listing">{title}</a>
+<a href={`/listing/${id}`}>
+	<div class="mt-5 max-w-lg rounded overflow-hidden shadow-lg">
+		<img class="w-full" src={picture} alt={title} />
+		<div class="px-6 py-4">
+			<div class="font-bold text-xl mb-2">
+				<span>{title}</span>
+			</div>
+			<p class="text-sm font-medium text-gray-700 text-base">
+				{desc}
+			</p>
+			<p class="text-sm font-medium text-gray-700 text-base">
+				Posted from {school}
+			</p>
 		</div>
-		<p class="text-sm font-medium text-gray-700 text-base">
-			{desc}
-		</p>
-		<p class="text-sm font-medium text-gray-700 text-base">
-			Posted from {school}
-		</p>
+		<div class="px-6 pt-4 pb-2">
+			<span
+				class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+			>
+				${price}
+			</span>
+		</div>
 	</div>
-	<div class="px-6 pt-4 pb-2">
-		<span
-			class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-		>
-			${price}
-		</span>
-	</div>
-</div>
+</a>
