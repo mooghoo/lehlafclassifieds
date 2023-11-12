@@ -1,46 +1,26 @@
-# Tailwind [Docs](https://tailwindcss.com/docs/customizing-colors)
+# Project: Lehigh Valley Classifieds
+
+
+## Description:
+This project aims to create a digital marketplace for students in one of the six different higher learning institutions in the Lehigh Valley area. Students will be able to list unwanted items as well as persuse the listings in order to find items they want or need, and get in contact with sellers to negotiate or pay the listed price.
+
+AWS databases were utilized in order to [WHAT DO THEY DO????] which helped the project by [IDK THIS EITHER]. Svelte was brought in to streamline the creation of HTML, CSS, and JavaScript components for the website itself and to speed its creation. 
+
+Future expansion of this project could include accounts, which would lead to the introduction of saved listings, a bid system, a school filter system, and distance indicators on listings. None of these improvements would change the fundamental purpose or function of the site, but simply make it a more cohesive experience for users. 
 
 
 
-# SvelteKit [Docs](https://kit.svelte.dev/docs/introduction)
+## How to Use the Project:
+Navigate to the webpage at [INSERT URL HERE????] and scroll through the listings. Any desired listing can be clicked upon and viewed in greater detail, and the seller can be contacted through the specific listing page.
+
+If the intention is to create a listing, simply click the link, fill out the form, and await responses.
 
 
 
-# create-svelte
+Team Members:
+Noah Ross
+Jasmina Frederico
+Gia Mazza
+Kate Stadter
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
-
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+Special shoutout to AWS and Svelte
