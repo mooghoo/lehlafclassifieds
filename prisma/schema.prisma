@@ -8,7 +8,7 @@ generator client {
 datasource db {
   provider = "postgresql"
 
-  url = env("DATABASE_URL")
+  url = "postgres://postgres:6P78UTYYaPGbS4jJjBQl@database-lebay.cpbm2wicjszd.us-east-1.rds.amazonaws.com:5432/pgdata"
 }
 
 model Listing {
