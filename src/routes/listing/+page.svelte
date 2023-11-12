@@ -41,7 +41,7 @@
 		  <p class="text-3xl tracking-tight text-gray-900 font-medium">${data.price}</p>
 		  <form class="mt-10">
   
-			<a href="sms:{data.phone}?&body=Hi%2520there%252C%2520I%2527am%2520interested%2520in%2520your%2520{data.title}%2520on%2520classifieds" class="bg-blue-500 hover:bg-blue-700 mt-10 flex w-full items-center justify-center rounded-md border border-transparent px-8 py-3 text-base font-medium text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Send a text</a>
+			<a href="sms:{data.phone}?&body=Hi there, I am interested in your {data.title} that you posted on Lehigh Valley Classifieds!" class="bg-blue-500 hover:bg-blue-700 mt-10 flex w-full items-center justify-center rounded-md border border-transparent px-8 py-3 text-base font-medium text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Send a text</a>
 			<p class="pt-5 text-md text-gray-900 font-medium">Or contact at {data.phone}</p>
 		  </form>
 		</div>
