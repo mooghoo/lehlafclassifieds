@@ -1,10 +1,13 @@
 import { prisma } from '$lib/db.js';
 import type { Listing } from '$lib/listing.js';
 import { Schools } from '$lib/schools.js';
+import { validateURL } from '$lib/utils';
 
 /** @type {import('./$types').Actions} */
 export const actions = {
 	default: async ({ request }) => {
+		console.log(await prisma.listing.findMany());
+
 		const data = await request.formData();
 
 		const title = data.get('title') as string;
@@ -82,18 +85,6 @@ function formatPhoneNumber(phoneNumber: string): string | null {
 		return digits.replace(/(\d{3})(\d{3})(\d{4})/, '($1) $2-$3');
 	} else {
 		// If not 10 digits, return original or handle as needed
-		return null;
-	}
-}
-
-function validateURL(url: string): string | null {
-	try {
-		// Attempt to construct a URL object; this will throw an error for invalid URLs
-		new URL(url);
-		// If no error is thrown, return the original URL
-		return url;
-	} catch (error) {
-		// If an error is thrown, return an empty string
 		return null;
 	}
 }

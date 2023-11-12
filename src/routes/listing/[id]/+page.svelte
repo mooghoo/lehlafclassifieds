@@ -1,64 +1,53 @@
 <script>
 	/** @type {import('./$types').PageData} */
 	export let data;
+	const listing = data;
 </script>
 
-<div class="mt-0 pb-10">
-	<div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
-		<div class="text-base font-semibold leading-7 text-gray-600 text-xl">
-			<a href="/"><span aria-hidden="true">&larr;</span>Go back</a>
-		</div>
+<div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
+	<div class="text-base font-semibold leading-7 text-gray-600">
+		<a href="/"><span aria-hidden="true">&larr;</span>Go back</a>
 	</div>
 </div>
-<div class="bg-white">
-	<div class="pt-6">
-		<!-- Image gallery -->
-		<div
-			class="mx-auto mt-6 max-w-2xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-x-8 lg:px-8"
-		>
-			<div class="aspect-h-4 aspect-w-3 hidden overflow-hidden rounded-lg lg:block">
-				<img
-					src={data.picture}
-					alt="Two each of gray, white, and black shirts laying flat."
-					class="h-full w-full object-cover object-center"
-				/>
+
+<div class="grid md:grid-cols-2 gap-6 lg:gap-12 items-start max-w-6xl px-4 mx-auto">
+	<div class="grid md:grid-cols-5 gap-3 items-start">
+		<div class="md:col-span-4">
+			<img
+				src={listing.picture || '/placeholder.svg'}
+				alt={listing.title}
+				class="h-[500px] aspect-[1/1] object-cover border border-zinc-200 w-full rounded-lg overflow-hidden dark:border-zinc-800"
+			/>
+		</div>
+	</div>
+	<div class="grid items-start mt-20">
+		<div class="flex flex-col">
+			<h1 class="font-bold text-3xl lg:text-4xl">
+				{listing.title}
+				<span> - {listing.price && listing.price > 0 ? `$${listing.price}` : 'Free'}</span>
+			</h1>
+			<div>
+				<p>{listing.description || 'No description available'}</p>
+			</div>
+			<!-- 
+			<div class="mt-">
+				<span
+					class="inline-block bg-gray-200 rounded-full px-3 py-3 font-bold text-xl text-gray-700 mr-2 mb-2"
+				>
+					{listing.price && listing.price > 0 ? `$${listing.price}` : 'Free'}
+				</span>
+			</div> -->
+
+			<div>
+				<p class="mt-2 text-gray-900 font-medium text-md">{listing.school}</p>
 			</div>
 		</div>
-
-		<!-- Product info -->
-		<div
-			class="mx-auto max-w-2xl px-4 pb-16 pt-10 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8 lg:px-8 lg:pb-24 lg:pt-16"
+		<a
+			href="sms:{data.phone}?&body=Hi there, I am interested in your {data.title} that you posted on Lehigh Valley Classifieds!"
+			class="bg-blue-500 hover:bg-blue-700 mt-2 flex w-full items-center justify-center rounded-md border border-transparent px-8 py-3 text-base font-medium text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
 		>
-			<div class="lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
-				<h1 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">{data.title}</h1>
-			</div>
-
-			<!-- Options -->
-			<div class="mt-4 lg:row-span-3 lg:mt-0">
-				<p class="text-3xl tracking-tight text-gray-900 font-medium">${data.price}</p>
-				<form class="mt-10">
-					<a
-						href="sms:{data.phone}?&body=Hi there, I am interested in your {data.title} that you posted on Lehigh Valley Classifieds!"
-						class="bg-blue-500 hover:bg-blue-700 mt-10 flex w-full items-center justify-center rounded-md border border-transparent px-8 py-3 text-base font-medium text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-						>Send a text</a
-					>
-					<p class="pt-5 text-md text-gray-900 font-medium">Or contact at {data.phone}</p>
-				</form>
-			</div>
-
-			<div
-				class="py-10 lg:col-span-2 lg:col-start-1 lg:border-r lg:border-gray-200 lg:pb-16 lg:pr-8 lg:pt-6"
-			>
-				<!-- Description and details -->
-				<div>
-					<div class="mt-10">
-						<h2 class="text-sm font-medium text-gray-900">Details</h2>
-					</div>
-					<div class="space-y-6">
-						<p class="text-base text-gray-900">{data.description}</p>
-					</div>
-				</div>
-			</div>
-		</div>
+			Send a text</a
+		>
+		<p class="pt-5 text-md text-gray-900 font-medium">Or contact at {data.phone}</p>
 	</div>
 </div>
