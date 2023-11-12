@@ -1,8 +1,22 @@
-let schools = [{text: 'Lafayette College', tags: ['laf']}, {text: 'Lehigh University', tags: ['lehigh']}, {text: 'Moravian University', tags: ['moravian']}, {text: 'DeSales University', tags: ['desales']}, {text: 'Cedar Crest University', tags: ['cedarCrest']}, {text: 'Mulhenberg University', tags: ['muhlenberg']}];
+<!-- <script>
+	let schools = [
+		{ text: 'Lafayette College', tags: ['laf'] },
+		{ text: 'Lehigh University', tags: ['lehigh'] },
+		{ text: 'Moravian University', tags: ['moravian'] },
+		{ text: 'DeSales University', tags: ['desales'] },
+		{ text: 'Cedar Crest University', tags: ['cedarCrest'] },
+		{ text: 'Mulhenberg University', tags: ['muhlenberg'] }
 
-$: all_tags = [...new Set(schools.map((x) => x.tags).flat())];
 
-let filters = new Map();
+$: filtered = schools.filter( (x) => (filters['tags'] != null &&
+Object.values(filters['tags']).every((func) => func == null || func(x))) || !filters['tags'] );
+
+	];
+
+	$: all_tags = [...new Set(schools.map((x) => x.tags).flat())];
+
+	let filters = new Map();
+</script>
 
 {#each filtered as school}
 	<div class="school">
@@ -12,13 +26,6 @@ let filters = new Map();
 		{/each}
 	</div>
 {/each}
-
-$: filtered = schools.filter(
-	(x) =>
-		(filters['tags'] != null &&
-			Object.values(filters['tags']).every((func) => func == null || func(x))) ||
-		!filters['tags']
-);
 
 {#each all_tags as tag}
 	<button
@@ -42,4 +49,4 @@ $: filtered = schools.filter(
 			}
 		}}>{tag}</button
 	>
-{/each}
+{/each} -->

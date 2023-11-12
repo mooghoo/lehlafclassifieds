@@ -1,0 +1,48 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = "postgres://postgres:4-eAd-AgC464CD*F6a3e1b-1fc4FDfBf@viaduct.proxy.rlwy.net:30167/railway"
+}
+
+// export interface Listing {
+// 	id: number;
+// 	title: string;
+// 	description: string | null;
+// 	picture: string | null;
+// 	price: number | null;
+// 	school: string;
+// 	phone: string;
+// }
+
+model Listing {
+  id          String   @id
+  title       String
+  description String?
+  picture     String?
+  price       Int?
+  school      String
+  phone       String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Test {
+  id        Int      @id
+  name      String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model User {
+  id        Int      @id
+  name      String
+  email     String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
