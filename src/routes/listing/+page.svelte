@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { Listing } from '$lib/listing';
 
-	export let data: Listing = {
+	let data: Listing = {
 		id: '1',
 		title: 'Vintage Chair',
 		description: 'A classic wooden chair in good condition.',
