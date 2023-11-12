@@ -7,18 +7,9 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url      = "postgres://postgres:4-eAd-AgC464CD*F6a3e1b-1fc4FDfBf@viaduct.proxy.rlwy.net:30167/railway"
-}
 
-// export interface Listing {
-// 	id: number;
-// 	title: string;
-// 	description: string | null;
-// 	picture: string | null;
-// 	price: number | null;
-// 	school: string;
-// 	phone: string;
-// }
+  url = env("DATABASE_URL")
+}
 
 model Listing {
   id          String   @id
