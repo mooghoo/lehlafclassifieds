@@ -4,14 +4,6 @@
 	import Listing from '$lib/components/Listing.svelte';
 </script>
 
-<!-- <Listing
-	title="Vintage Chair"
-	desc="A classic wooden chair in good condition."
-	picture="https://www.ikea.com/us/en/images/products/stefan-chair-brown-black__0727320_pe735593_s5.jpg?f=s"
-	price={50}
-	school="Lafayette College"
-/>
-
 {#each data.listings as item}
 	<Listing
 		title={item.title}
