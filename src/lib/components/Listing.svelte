@@ -14,10 +14,10 @@
 			<div class="font-bold text-xl mb-2">
 				<span>{title}</span>
 			</div>
-			<p class="text-sm font-medium text-gray-700 text-base">
+			<p class=" font-medium text-gray-700 text-base">
 				{desc}
 			</p>
-			<p class="text-sm font-medium text-gray-700 text-base">
+			<p class="font-medium text-gray-700 text-base">
 				Posted from {school}
 			</p>
 		</div>

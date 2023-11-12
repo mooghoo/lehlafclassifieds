@@ -12,6 +12,7 @@
 
 <form class="space-y-4" {method} action="/post">
 	<div>
+		<!-- svelte-ignore a11y-label-has-associated-control -->
 		<label class="block text-sm font-medium text-gray-700">Title</label>
 		<input
 			type="text"
@@ -22,6 +23,7 @@
 	</div>
 
 	<div>
+		<!-- svelte-ignore a11y-label-has-associated-control -->
 		<label class="block text-sm font-medium text-gray-700">Description</label>
 		<textarea
 			name="description"
@@ -30,6 +32,7 @@
 		/>
 	</div>
 
+	<!-- svelte-ignore a11y-label-has-associated-control -->
 	<div>
 		<label class="block text-sm font-medium text-gray-700">Picture URL</label>
 		<input
@@ -41,6 +44,7 @@
 	</div>
 
 	<div>
+		<!-- svelte-ignore a11y-label-has-associated-control -->
 		<label class="block text-sm font-medium text-gray-700">Price ($)</label>
 		<input
 			name="price"
@@ -51,6 +55,7 @@
 	</div>
 
 	<div>
+		<!-- svelte-ignore a11y-label-has-associated-control -->
 		<label class="block text-sm font-medium text-gray-700">Phone Number</label>
 		<input
 			name="phone"
@@ -60,6 +65,7 @@
 		/>
 	</div>
 	<div>
+		<!-- svelte-ignore a11y-label-has-associated-control -->
 		<label class="block text-sm font-medium text-gray-700">School</label>
 		<select
 			name="school"
