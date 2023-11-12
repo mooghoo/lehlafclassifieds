@@ -2,8 +2,8 @@
 	import '../app.css';
 </script>
 
-<div class="relative isolate overflow-hidden py-9">
-	<div class="w-1/2 p-4 mx-auto text-center">
+<div class="relative isolate overflow-hidden pt-9">
+	<div class="w-1/2 mx-auto text-center">
 	  <div class="mx-auto max-w-2xl lg:mx-0">
 		<h2 class="text-6xl font-bold tracking-tight">Leh-Laf Classifieds</h2>
 		<p class="mt-6 text-2xl leading-8 text-gray-600">Buy and sell items in the Lehigh Valley from students you trust.</p>

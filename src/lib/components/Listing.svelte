@@ -11,7 +11,7 @@
 	<img class="w-full" src={picture} alt={title} />
 	<div class="px-6 py-4">
 		<div class="font-bold text-xl mb-2">
-			<a href="/listing/{id}">{title}</a></div>
+			<a href="/listing">{title}</a></div>
 		<p class="text-sm font-medium text-gray-700 text-base">
 			{desc}
 		</p>
