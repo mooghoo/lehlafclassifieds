@@ -1,5 +1,5 @@
 <script>
-	export let id = 0;
+	export let id = '';
 	export let title = '';
 	export let desc = '';
 	export let picture = '';
@@ -11,7 +11,8 @@
 	<img class="w-full" src={picture} alt={title} />
 	<div class="px-6 py-4">
 		<div class="font-bold text-xl mb-2">
-			<a href="/listing">{title}</a></div>
+			<a href="/listing">{title}</a>
+		</div>
 		<p class="text-sm font-medium text-gray-700 text-base">
 			{desc}
 		</p>
